@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+
+<project name='abacus-lib-js-ots' default='dist' xmlns:ivy='antlib:org.apache.ivy.ant'>
+
+   <property environment='env'/>
+   <import file='${env.ANT_TOOLS_HOME}/ant.init.xml'/>
+
+   <dirname property="abacus-lib-js-ots.dir" file="${ant.file.abacus-lib-js-ots}"/>
+
+   <target name='abacus-lib-js-ots'>
+      <subant inheritrefs='false' target='dist'>
+         <fileset dir='${abacus-lib-js-ots.dir}' includes='build.xml'/>
+      </subant>
+   </target>
+
+   <target name='dist'>
+      <echo message='dont need to build lib-js-ots yet'/>
+   </target>
+
+</project>
